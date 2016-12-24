@@ -1,6 +1,6 @@
 <template>
-	<div class="header">
-		header
+	<div class="seller">
+		seller
 	</div>
 </template>
 
