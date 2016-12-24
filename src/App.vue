@@ -23,6 +23,12 @@ export default{
 
 <style lang="stylus" rel="stylesheet/stylus">
   #app
-    font-size: 56px
-    background-color: red
+    .tab
+      display: flex
+      width: 100%
+      height: 40px
+      line-height: 40px
+      .tab-item
+        flex: 1
+        text-align: center
 </style>
