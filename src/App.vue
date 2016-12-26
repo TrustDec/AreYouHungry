@@ -19,6 +19,11 @@
 <script>
 import header from './components/header/header.vue';
 export default{
+  data() {
+    return {
+      seller: {}
+    };
+  },
   components: {
     'v-header': header
   }
