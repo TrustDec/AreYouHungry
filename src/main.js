@@ -5,7 +5,7 @@ import VueResource from 'vue-resource';
 import goods from './components/goods/goods';
 import ratings from './components/ratings/ratings';
 import seller from './components/seller/seller';
-
+// 192.168.1.114:8080//componentController1.do?datagrid
 import 'common/stylus/index.styl';
 
 Vue.use(VueRouter);
