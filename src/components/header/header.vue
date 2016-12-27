@@ -43,10 +43,10 @@
 			font-size: 0
 			.avatar
 				display: inline-block
+				vertical-align: top
 			.content
 				display: inline-block
 				margin-left: 16px
-				font-size: 16px
 				.title
 					margin: 2px 0 8px 0
 					.brand
@@ -62,4 +62,8 @@
 						font-size: 16px
 						line-height: 18px
 						font-weight: bold
+				.description
+					line-height: 12px
+					margin-bottom: 10px
+					font-size: 12px
 </style>
