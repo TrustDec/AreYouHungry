@@ -77,6 +77,7 @@
 						width: 12px
 						height: 12px
 						margin-right: 4px
+						vertical-align: top
 						background-size: 12px 12px
 						background-repeat: no-repeat
 						&.decrease							
@@ -89,6 +90,10 @@
 							bg-image('invoice_1')
 						&.special
 							bg-image('special_1')
+					.text
+						line-height: 12px
+						font-size: 10px
+						
 						
 					
 					
