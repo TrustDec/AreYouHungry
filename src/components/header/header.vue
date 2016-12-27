@@ -101,7 +101,7 @@
 			.support-count
 				position: absolute
 				right: 12px 
-				bottom: 18px
+				bottom: 14px
 				padding: 0 8px 
 				height: 24px
 				line-height: 24px
@@ -109,8 +109,11 @@
 				background-color: rgba(0,0,0,0.2)
 				text-align: center
 				.count
+					vertical-align: top
 					font-size: 10px
 				.icon-keyboard_arrow_right
+					margin-left: 2px
+					line-height: 24px
 					font-size: 10px
 				
 				
