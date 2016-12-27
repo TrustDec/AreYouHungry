@@ -53,7 +53,13 @@
 						width: 30px
 						height: 18px
 						display: inline-block
+						vertical-align: top
 						bg-image('brand')
 						background-size: 30px 18px
 						background-repeat: no-repeat
+					.name
+						margin-left: 6px
+						font-size: 16px
+						line-height: 18px
+						font-weight: bold
 </style>
