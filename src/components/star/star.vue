@@ -1,8 +1,6 @@
 <template>
 	<div class="star" :class="starType">
-		<span v-for="itemClass in itemClasses" :class="itemClass" class="star-item">
-			
-		</span>
+		<span v-for="itemClass in itemClasses" :class="itemClass" class="star-item" track-by="$index"></span>
 	</div>
 </template>
 <script type="text/ecmascript-6">
@@ -21,30 +19,30 @@ const CLS_OFF = 'off';
 			}
 		},
 		computed: {
-			starType(){
-				return 'star-'+this.size;
+			starType() {
+				return 'star-' + this.size;
+			},
+			itemClasses() {
+				let result = [];
+				let score = Math.floor(this.score * 2) / 2;
+				let hasDecimal = score % 1 !== 0;
+				let integer = Math.floor(score);
+				for (let i = 0; i < integer; i++) {
+					result.push(CLS_ON);
+				}
+				if (hasDecimal) {
+					result.push(CLS_HALF);
+				}
+				while (result.length < LENGTH) {
+					result.push(CLS_OFF);
+				}
+				return result;
 			}
-		},
-		itemClasses() {
-			let result = [];
-			let score = Math.floor(this.score *2) / 2;
-			let hasDecimal =score % 1 !==0;
-			let integer =Math.floor(score);
-			for (var i = 0; i < integer; i++) {
-				result.push(CLS_ON);
-			}
-			if (hasDecimal) {
-				result.push(CLS_HALF);
-			}
-			while (result.length < LENGTH) {
-				result.push(CLS_HALF);
-			}
-			return result;
 		}
 	};
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
-	@import "../../common/stylus/minxin.styl"
+	@import "../../common/stylus/mixin.styl"
 	.star
 		.star-item
 			display: inline-block
@@ -70,11 +68,11 @@ const CLS_OFF = 'off';
 				margin-right: 6px
 				background-size: 15px 15px
 				&.on
-					bg-image('star15_on')
+					bg-image('star36_on')
 				&.half
-					bg-image('star15_half')
+					bg-image('star36_half')
 				&.off
-					bg-image('star15_off')
+					bg-image('star36_off')
 				&:last-child
 					margin-right: 0
 		&.star-24
