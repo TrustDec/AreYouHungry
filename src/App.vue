@@ -30,7 +30,6 @@ export default{
       response = response.body;
       if (response.errno === ERR_OK) {
         this.seller = response.data;
-        console.log(this.seller);
       }
     });
   },
