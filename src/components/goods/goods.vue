@@ -2,10 +2,9 @@
 	<div class="goods">
 		<div class="menu-wrapper">
 			<ul>
-				<li v-for="item in goods">
+				<li v-for="item in goods" class="menu-item">
 					<span class="text">
-						<span v-show="item.type>0" class="icon" :class="classMap[item.type]"></span>
-						{{item.name}}
+						<span v-show="item.type>0" class="icon" :class="classMap[item.type]"></span>{{item.name}}
 					</span>
 				</li>
 			</ul>
@@ -14,7 +13,7 @@
 	</div>
 </template>
 
-<script type="text/ecmas cript-6">
+<script type="text/ecmascript-6">
 const ERR_OK = 0;
 	export default {
 		props: {
@@ -30,7 +29,6 @@ const ERR_OK = 0;
 		created() {
 			this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee'];
 			this.$http.get('/api/goods').then((response) => {
-				console.log(response);
 				response = response.body;
 				if (response.errno === ERR_OK) {
 					this.goods = response.data;
@@ -53,6 +51,8 @@ const ERR_OK = 0;
 			flex: 0 0 80px
 			width: 80px
 			background: #f3f5f7
+			.menu-item
+				display: table
 		.foods-wrapper
 			flex: 1
 </style>
