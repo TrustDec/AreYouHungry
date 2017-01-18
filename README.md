@@ -1,27 +1,26 @@
-# areyouhungry
+# AreYouHungry
+
+### are you hungry？
 
 > a vue.js 'are you hungry' project
 
-## Build Setup
+### 项目构建
 
-``` bash
-# install dependencies
+### install dependencies || 安装依赖关系
 npm install
 
-# serve with hot reload at localhost:8080
+### 服务热加载 ☞ localhost：8080
 npm run dev
 
-# build for production with minification
+### 通过压缩生产环境
 npm run build
 
-# run unit tests
+### 运行单元测试
 npm run unit
 
-# run e2e tests
+### 运行e2e测试
 npm run e2e
 
-# run all tests
+### 运行所有测试
 npm test
-```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
